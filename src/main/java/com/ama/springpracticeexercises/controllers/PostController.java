@@ -1,24 +1,22 @@
 package com.ama.springpracticeexercises.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@Controller // Identifies class as a controller without having to create the POST and GET requests
 public class PostController {
 
+    // Defines method that should be invoked by the URI, in this case, "posts"
     @GetMapping("/posts")
-    @ResponseBody
+    @ResponseBody // Is whats displays on the web page: "List of legen... wait for it! DARY posts"
     public String indexPage() {
         return "List of legen... wait for it! DARY posts";
     }
 
     @GetMapping("/posts/{id}")
     @ResponseBody
-    public String postName() {
-        return "Selling: Superman powers";
+    public String postName(@PathVariable int id) {
+        return "Selling: " + id;
     }
 
     @GetMapping("/posts/create")
