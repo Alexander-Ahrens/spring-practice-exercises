@@ -15,13 +15,14 @@ public class RollDiceController {
         int max = 6;
         int min = 1;
         int range = (max - min) + 1;
+
         for (int i = 0; i < 6; i++) {
             int random = (int) (Math.random() * range) + min;
             if (random != n) {
                 return "Sorry, you guessed wrong.";
             }
-            }
         }
             return "rollDice";
     }
 }
+
