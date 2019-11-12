@@ -8,6 +8,12 @@ import java.util.ArrayList;
 
 @Controller // Identifies class as a controller without having to create the POST and GET requests
 public class PostController {
+//    private final PostRepository postDao;
+//
+//    public PostController(PostRepository postDao) {
+//        this.postDao = postDao;
+//    }
+
 
     // Defines method that should be invoked by the URI, in this case, "posts"
     // Shows all the posts
