@@ -54,6 +54,7 @@ public class PostController {
         return "redirect:/posts/" + post.getId();
     }
 
+    // Edit button
     @GetMapping("/posts{id}/edit")
     public String edit(@PathVariable long id, Model viewModel) {
         viewModel.addAttribute("post", postDao.getOne(id));
