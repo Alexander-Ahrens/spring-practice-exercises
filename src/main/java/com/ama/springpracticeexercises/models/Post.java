@@ -1,19 +1,31 @@
 package com.ama.springpracticeexercises.models;
 
 
+import javax.persistence.*;
 
+@Entity
 public class Post {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "int(13) UNSIGNED")
     private long id;
+    @Column(nullable = false, length = 100)
     private String title;
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String body;
 
-    public Post(long id, String title, String body) {
-        this.id = id;
+    public Post() {
+
+    }
+
+    public Post(String title, String body) {
         this.title = title;
         this.body = body;
     }
 
-    public Post(String title, String body) {
+    public Post(long id, String title, String body) {
+        this.id = id;
         this.title = title;
         this.body = body;
     }
