@@ -1,11 +1,20 @@
 package com.ama.springpracticeexercises.models;
 
 public class Post {
+    private long id;
     private String title;
     private String body;
 
-    public Post() {
+    public Post(long i, String title, String body) {
 
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTitle() {
