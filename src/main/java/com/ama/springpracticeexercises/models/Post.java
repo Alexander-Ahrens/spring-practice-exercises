@@ -4,6 +4,7 @@ package com.ama.springpracticeexercises.models;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "posts")
 public class Post {
 
     @Id
@@ -16,7 +17,6 @@ public class Post {
     private String body;
 
     public Post() {
-
     }
 
     public Post(String title, String body) {
