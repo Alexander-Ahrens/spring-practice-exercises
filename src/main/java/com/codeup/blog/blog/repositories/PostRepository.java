@@ -1,6 +1,6 @@
-package com.ama.springpracticeexercises.repositories;
+package com.codeup.blog.blog.repositories;
 
-import com.ama.springpracticeexercises.models.Post;
+import com.codeup.blog.blog.models.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
